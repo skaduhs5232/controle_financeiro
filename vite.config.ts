@@ -9,18 +9,13 @@ export default defineConfig({
     outDir: 'dist',
     emptyOutDir: true,
     rollupOptions: {
-      input: {
-        main: path.resolve(__dirname, 'index.html'),
-      },
-      output: {
-        assetFileNames: 'assets/[name].[hash].[ext]',
-        chunkFileNames: 'assets/[name].[hash].js',
-        entryFileNames: 'assets/[name].[hash].js',
-      }
+      input: path.resolve(__dirname, 'index.html')
     }
   },
   resolve: {
-    extensions: ['.js', '.ts', '.jsx', '.tsx']
+    alias: {
+      '@': path.resolve(__dirname, 'src')
+    }
   },
   server: {
     headers: {
