@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
   base: '/controle_financeiro/',
   build: {
-    outDir: 'docs',
+    outDir: 'dist',
     emptyOutDir: true
   }
 })
