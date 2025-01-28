@@ -8,18 +8,10 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     emptyOutDir: true,
-    rollupOptions: {
-      input: path.resolve(__dirname, 'index.html')
-    }
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'src')
-    }
-  },
-  server: {
-    headers: {
-      'Content-Type': 'application/javascript'
+      '@': path.resolve(__dirname, './src')
     }
   }
 })
