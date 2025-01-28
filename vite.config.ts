@@ -14,5 +14,13 @@ export default defineConfig({
         entryFileNames: 'assets/[name].[hash].js',
       }
     }
+  },
+  resolve: {
+    extensions: ['.js', '.ts', '.jsx', '.tsx']
+  },
+  server: {
+    headers: {
+      'Content-Type': 'application/javascript'
+    }
   }
 })
